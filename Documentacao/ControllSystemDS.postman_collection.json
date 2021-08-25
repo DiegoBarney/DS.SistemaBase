@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "942913bb-2582-4e39-934e-147540f86af5",
+		"name": "ControllSystemDS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autorizacao",
+			"item": [
+				{
+					"name": "Autenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Username\": \"admin\",\r\n    \"Password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44355/Autenticacao",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44355",
+							"path": [
+								"Autenticacao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
