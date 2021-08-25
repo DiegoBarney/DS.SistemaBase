@@ -60,7 +60,8 @@ namespace DS.Infrastructure.ClientControll.Repository.Config
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ApplyConfiguration(new ClientePessoaFisicaMap());
+            modelBuilder.ApplyConfiguration(new ClientePessoaFisicaMap()).
+                         ApplyConfiguration(new UserMap());
         }
     }
 }

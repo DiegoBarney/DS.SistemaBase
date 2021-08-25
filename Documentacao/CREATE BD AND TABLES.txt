@@ -1,0 +1,46 @@
+
+-- -----------------------------------------------------
+-- Schema ControllSystemDS
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `controllsystemds` DEFAULT CHARACTER SET utf8 ;
+USE `controllsystemds` ;
+
+-- -----------------------------------------------------
+-- Table `controllsystemds`.`USER_SISTEMA`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `porcelanaball`.`ALUNO` (
+  `CODIGO` INT NOT NULL AUTO_INCREMENT,
+  `NOME` VARCHAR(200) NULL,
+  `APELIDO` VARCHAR(200) NULL,
+  `DATA_NASCIMENTO` DATE NULL,
+  `PESO` DECIMAL(9,3) NULL,
+  `ALTURA` DECIMAL(9,3) NULL,
+  `TELEFONE_RESIDENCIAL` VARCHAR(20) NULL,
+  `TELEFONE_CELULAR` VARCHAR(20) NULL,
+  `CPF` VARCHAR(20) NULL,
+  `RG` VARCHAR(20) NULL,
+  `ATIVO` BIT(1) NULL,
+  `BIOMETRIA` VARCHAR(1000) NULL,
+  `EMAIL` VARCHAR(70) NULL,
+  `ENDERECO` VARCHAR(100) NULL,
+  `NUMERO` VARCHAR(10) NULL,
+  `BAIRRO` VARCHAR(45) NULL,
+  `CIDADE` VARCHAR(45) NULL,
+  `UF` CHAR(2) NULL,
+  `CEP` VARCHAR(10) NULL,
+  `COMPLEMENTO` VARCHAR(100) NULL,
+  PRIMARY KEY (`CODIGO`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = armscii8;
+
+
+-- -----------------------------------------------------
+-- Table `controllsystemds`.`USUARIO_SISTEMA`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `controllsystemds`.`USUARIO_SISTEMA` (
+  `CODIGO` INT NOT NULL AUTO_INCREMENT,
+  `USERNAME` VARCHAR(45) NULL,
+  `PASSWORD` VARCHAR(45) NULL,
+  `ROLE` VARCHAR(45) NULL,
+  PRIMARY KEY (`CODIGO`))
+ENGINE = InnoDB;

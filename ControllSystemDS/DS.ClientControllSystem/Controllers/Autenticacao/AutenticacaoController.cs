@@ -1,15 +1,13 @@
-﻿using FluentValidation;
+﻿using System.Net;
+using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Authorization;
 using DS.ClientControllSystem.Core;
 using DS.Service.ClientControll.Interface;
 using DS.Service.ClientControll;
 using DS.Domain.ClientControll;
-
-using System.Net;
-
-using Microsoft.AspNetCore.Cors;
 
 namespace DS.ClientControllSystem.Controllers.Autenticacao
 {

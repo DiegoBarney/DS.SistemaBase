@@ -1,0 +1,5 @@
+INSERT INTO `controllsystemds`.`USUARIO_SISTEMA` (`CODIGO`,`USERNAME`,`PASSWORD`,`ROLE`)
+VALUES ('1','admin','1234','manager');
+
+INSERT INTO `controllsystemds`.`USUARIO_SISTEMA` (`CODIGO`,`USERNAME`,`PASSWORD`,`ROLE`)
+VALUES ('2','default','1234','employee');
