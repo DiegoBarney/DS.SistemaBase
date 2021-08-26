@@ -31,8 +31,7 @@ namespace DS.Infrastructure.ClientControll.Repository
         //Essa listagem consiste em retornar a classe Aluno e todas suas entidades filhas
         public List<ClientePessoaFisica> FullList()
         {
-            List<ClientePessoaFisica> clientePessoaFisica = context.Set<ClientePessoaFisica>().
-                                                                    Include(a => a.cpf).OrderBy(a => a.nome).ToList();
+            List<ClientePessoaFisica> clientePessoaFisica = context.Set<ClientePessoaFisica>().OrderBy(a => a.nome).ToList();
             return clientePessoaFisica;
         }
     }

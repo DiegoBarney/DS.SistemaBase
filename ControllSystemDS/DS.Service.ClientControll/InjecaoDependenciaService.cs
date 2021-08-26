@@ -18,6 +18,7 @@ namespace DS.Service.ClientControll
 
             // Validator
             services.AddScoped<IValidator<User>, UserValidator>();
+            services.AddScoped<IValidator<ClientePessoaFisica>, ClientePessoaFisicaValidator>();
 
             // Repository
             services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));

@@ -8,7 +8,7 @@ namespace DS.Domain.ClientControll
         public string email { get; set; }
         public string foto { get; set; }
         public string rede_social { get; set; }
-        public string aplicativo_menssagem { get; set; }
+        public string aplicativo_mensagem { get; set; }
         public string telefone_residencial { get; set; }
         public string telefone_celular { get; set; }
         public string biometria { get; set; }

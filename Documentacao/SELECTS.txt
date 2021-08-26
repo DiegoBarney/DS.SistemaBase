@@ -1,0 +1,2 @@
+select *from controllsystemds.usuario_sistema
+select *from controllsystemds.cliente_pessoa_fisica

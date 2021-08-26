@@ -37,6 +37,155 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "ClientePessoaFisica",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImJhdG1hbiIsInJvbGUiOiJtYW5hZ2VyIiwibmJmIjoxNjExNjIzMzA3LCJleHAiOjE2MTE2MzA1MDcsImlhdCI6MTYxMTYyMzMwN30.Sb0gSct8FrZKTiWuq0yIvw6ReejX-fforNUs_IdXs5o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"Joao\",\r\n        \"endereco\": \"Rua belem\",\r\n        \"numero\": \"155\",\r\n        \"bairro\": \"GREEN VALEY\", \r\n        \"cidade\": \"JAPA\",\r\n        \"cep\": \"151515\",\r\n        \"uf\": \"SP\",\r\n        \"complemento\": \"casa\",\r\n        \"data_nascimento\": \"1992-02-10T00:00:00\",\r\n        \"apelido\": \"Joaozinho\",\r\n        \"email\": \"joaozinho@gmail.com\",\r\n        \"foto\": \"asdasdadadassdasd\",\r\n        \"rede_social\": \"@instagram/joaozinho\",\r\n        \"aplicativo_mensagem\": \"121212122112\",\r\n        \"telefone_residencial\": \"4545544545\",\r\n        \"telefone_celular\": \"454545\",\r\n        \"biometria\": \"454544545454545\",\r\n        \"ativo\": true,\r\n        \"cpf\": \"454544545454545\",\r\n        \"rg\": \"2222222222\",\r\n        \"certidao_nascimento\": \"4444444\",\r\n        \"certidao_casamento\": \"33333\",\r\n        \"titulo_eleitor\": \"11111\",\r\n        \"reservista\": \"asdasdasdas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44355/ClientePessoaFisica",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44355",
+							"path": [
+								"ClientePessoaFisica"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImJhdG1hbiIsInJvbGUiOiJtYW5hZ2VyIiwibmJmIjoxNjExMzY1MjA3LCJleHAiOjE2MTEzNzI0MDcsImlhdCI6MTYxMTM2NTIwN30.QrBnWVLEdSNL8LMLuNft3iojEvTYeGVZT-QyI1UzU90",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44355/ClientePessoaFisica",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44355",
+							"path": [
+								"ClientePessoaFisica"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByPages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6Im1hbmFnZXIiLCJuYmYiOjE2Mjk5NDM3MjUsImV4cCI6MTYyOTk1MDkyNSwiaWF0IjoxNjI5OTQzNzI1fQ.2zkEQ_L_90VooOSruix_tXtC1AERdce1hCu82qR5ZPk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44355/ClientePessoaFisica/byPage?pagina=1&itensPorPagina=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44355",
+							"path": [
+								"ClientePessoaFisica",
+								"byPage"
+							],
+							"query": [
+								{
+									"key": "pagina",
+									"value": "1"
+								},
+								{
+									"key": "itensPorPagina",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCodigo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6Im1hbmFnZXIiLCJuYmYiOjE2Mjk5NDQwMTcsImV4cCI6MTYyOTk1MTIxNywiaWF0IjoxNjI5OTQ0MDE3fQ.SP3nXCaEZbGTMNAYjBkAM6Nrw4WAy68vfp7fd3uGAhU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44355/ClientePessoaFisica/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44355",
+							"path": [
+								"ClientePessoaFisica",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

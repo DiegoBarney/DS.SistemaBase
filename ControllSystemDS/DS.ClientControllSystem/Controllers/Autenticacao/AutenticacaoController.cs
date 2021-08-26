@@ -9,7 +9,7 @@ using DS.Service.ClientControll.Interface;
 using DS.Service.ClientControll;
 using DS.Domain.ClientControll;
 
-namespace DS.ClientControllSystem.Controllers.Autenticacao
+namespace DS.ClientControllSystem.Controllers
 {
     [Route("[controller]")]
     public class AutenticacaoController : ApiBase
