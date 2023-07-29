@@ -1,0 +1,20 @@
+
+{
+    "region" : "sa-east-1",
+    "configuration" : "Release",
+    "framework"     : "netcoreapp3.1",
+    "self-contained" : false,
+    "application"    : "DSClientControllSystem",
+    "environment"    : "DSClientControllSystem-dev",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-4d8f5c05,sg-0b7fba9de5354ac3e\";\"aws:ec2:vpc,Subnets\"=\"subnet-b8db9ae3\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.2.7 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "dsclientcontrollsystem-dev",
+    "instance-type"        : "t2.micro",
+    "key-pair"             : "EC2-MICRO-DIEGO",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "none"
+}
