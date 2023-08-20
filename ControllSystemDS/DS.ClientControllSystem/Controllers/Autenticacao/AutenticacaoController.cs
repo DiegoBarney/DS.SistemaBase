@@ -11,7 +11,7 @@ using DS.Domain.ClientControll;
 
 namespace DS.ClientControllSystem.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class AutenticacaoController : ApiBase
     {
         private readonly IUserService _service;
@@ -40,7 +40,7 @@ namespace DS.ClientControllSystem.Controllers
             var userValidate = _service.Get(user);
 
             if (userValidate == null)
-                return ReturnJson(userValidate, (int)HttpStatusCode.Forbidden);
+                return ReturnJson(userValidate, HttpStatusCode.Forbidden);
 
             var token = TokenService.GenerateToken(userValidate);
 
@@ -57,14 +57,14 @@ namespace DS.ClientControllSystem.Controllers
         public JsonReturn Put([FromBody] User user)
         {
             if (user == null)
-                return ReturnJson("Por favor, passe alguma informação.", (int)HttpStatusCode.BadRequest);
+                return ReturnJson("User não está em um formato correto.", HttpStatusCode.BadRequest);
 
             ValidationResult results = _validator.Validate(user, options => options.IncludeRuleSets("update"));
 
             if (results.IsValid)
                 return ReturnJson(_service.Update(user));
             else
-                return ReturnJson(results.Errors, (int)HttpStatusCode.BadRequest);
+                return ReturnJson(results.Errors, HttpStatusCode.BadRequest);
         }
 
         [HttpDelete("{id}")]

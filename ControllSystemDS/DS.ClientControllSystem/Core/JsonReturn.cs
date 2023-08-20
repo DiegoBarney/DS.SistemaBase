@@ -1,4 +1,6 @@
-﻿namespace DS.ClientControllSystem.Core
+﻿using System.Net;
+
+namespace DS.ClientControllSystem.Core
 {
     public class JsonReturn
     {

@@ -7,31 +7,30 @@ namespace DS.ClientControllSystem.Core
 {
     public abstract class ApiBase : ControllerBase
     {
-        public NotificationContext _notificationContext;
+        protected NotificationContext _notificationContext;
 
-        public JsonReturn ReturnJson(object retorno, int status = (int)HttpStatusCode.OK)
+        protected JsonReturn ReturnJson(object retorno, HttpStatusCode status = HttpStatusCode.OK)
         {
             JsonReturn json = new JsonReturn();
+
+            json.StatusCode = (int)status;
+            json.Success = false;
 
             if (_notificationContext.HasNotifications)
             {
                 json.Error = _notificationContext.Notifications;
                 json.StatusCode = (int)HttpStatusCode.InternalServerError;
-                json.Success = false;
             }
             else
             {
-                if (status == (int)HttpStatusCode.OK)
+                if (status == HttpStatusCode.OK)
                 {
                     json.Data = retorno;
-                    json.StatusCode = (int)HttpStatusCode.OK;
                     json.Success = true;
                 }
                 else
                 {
                     json.Error = retorno;
-                    json.StatusCode = status;
-                    json.Success = false;
                 }
             }
 

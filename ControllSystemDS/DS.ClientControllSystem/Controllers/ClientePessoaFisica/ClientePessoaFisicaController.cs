@@ -10,7 +10,7 @@ using DS.Service.ClientControll.Interface;
 
 namespace DS.ClientControllSystem.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ClientePessoaFisicaController : ApiBase
     {
         private readonly IClientePessoaFisicaService _service;
@@ -49,14 +49,14 @@ namespace DS.ClientControllSystem.Controllers
         public JsonReturn Post([FromBody] ClientePessoaFisica cliente)
         {
             if (cliente == null)
-                return ReturnJson("Por favor, passe alguma informação.", (int)HttpStatusCode.BadRequest);
+                return ReturnJson("Por favor, passe alguma informação.", HttpStatusCode.BadRequest);
 
             ValidationResult results = _validator.Validate(cliente, options => options.IncludeRuleSets("insert"));
 
             if (results.IsValid)
                 return ReturnJson(_service.Insert(cliente));
             else
-                return ReturnJson(results.Errors, (int)HttpStatusCode.BadRequest);
+                return ReturnJson(results.Errors, HttpStatusCode.BadRequest);
         }
 
         [HttpPut]
@@ -64,14 +64,14 @@ namespace DS.ClientControllSystem.Controllers
         public JsonReturn Put([FromBody] ClientePessoaFisica cliente)
         {
             if (cliente == null)
-                return ReturnJson("Por favor, passe alguma informação.", (int)HttpStatusCode.BadRequest);
+                return ReturnJson("Por favor, passe alguma informação.", HttpStatusCode.BadRequest);
 
             ValidationResult results = _validator.Validate(cliente, options => options.IncludeRuleSets("update"));
 
             if (results.IsValid)
                 return ReturnJson(_service.Update(cliente));
             else
-                return ReturnJson(results.Errors, (int)HttpStatusCode.BadRequest);
+                return ReturnJson(results.Errors, HttpStatusCode.BadRequest);
         }
 
         [HttpDelete("{id}")]
