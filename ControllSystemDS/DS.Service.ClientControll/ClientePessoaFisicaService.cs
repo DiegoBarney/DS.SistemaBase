@@ -7,7 +7,7 @@ using DS.Infrastructure.Utils.ClientControll;
 
 namespace DS.Service.ClientControll
 {
-    class ClientePessoaFisicaService : IClientePessoaFisicaService
+    public class ClientePessoaFisicaService : IClientePessoaFisicaService
     {
         private readonly IClientePessoaFisicaRepository _repository;
         private readonly NotificationContext _notificationContext;
