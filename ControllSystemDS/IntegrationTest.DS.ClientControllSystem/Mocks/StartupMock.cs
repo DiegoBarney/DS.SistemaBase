@@ -33,7 +33,7 @@ namespace IntegrationTest.DS.ClientControllSystem.Mocks
 
             // Repository
             services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
-            services.AddScoped<IClientePessoaFisicaRepository, ClientePessoaFisicaRepository>();
+            //services.AddScoped<IClientePessoaFisicaRepository, ClientePessoaFisicaRepository>();
            // services.AddScoped<IUserRepository, UserRepository>();
 
             // Notifications

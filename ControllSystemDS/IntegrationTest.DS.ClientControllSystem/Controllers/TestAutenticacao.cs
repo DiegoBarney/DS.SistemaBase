@@ -51,7 +51,7 @@ namespace IntegrationTest.DS.ClientControllSystem.Controllers
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("teste");
 
             //act
-            var response = await _httpClient.GetAsync("/api/Autenticacao");
+            var response = await _httpClient.GetAsync("/api/autenticacao");
             var responseAsString = await response.Content.ReadAsStringAsync();
             var responseGetUser = JsonConvert.DeserializeObject<ResponseGetUser>(responseAsString);
 
@@ -80,7 +80,7 @@ namespace IntegrationTest.DS.ClientControllSystem.Controllers
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("teste");
 
             //act
-            var response = await _httpClient.GetAsync("/api/Autenticacao");
+            var response = await _httpClient.GetAsync("/api/autenticacao");
             var responseAsString = await response.Content.ReadAsStringAsync();
             var responseGetUser = JsonConvert.DeserializeObject<ResponseGetUser>(responseAsString);
 

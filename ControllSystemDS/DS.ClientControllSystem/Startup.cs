@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Routing;
 
 namespace DS.ClientControllSystem
 {
@@ -75,7 +76,7 @@ namespace DS.ClientControllSystem
                 options.KnownProxies.Add(IPAddress.Parse("10.0.0.100"));
             });
 
-
+            services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 
             services.AddControllers();
 

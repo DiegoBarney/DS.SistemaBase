@@ -11,12 +11,12 @@ using DS.Service.ClientControll.Interface;
 namespace DS.ClientControllSystem.Controllers
 {
     [Route("api/[controller]")]
-    public class ClientePessoaFisicaController : ApiBase
+    public class ClientesPessoaFisicaController : ApiBase
     {
         private readonly IClientePessoaFisicaService _service;
         private readonly IValidator<ClientePessoaFisica> _validator;
 
-        public ClientePessoaFisicaController(NotificationContext notificationContext, IClientePessoaFisicaService service, IValidator<ClientePessoaFisica> validator)
+        public ClientesPessoaFisicaController(NotificationContext notificationContext, IClientePessoaFisicaService service, IValidator<ClientePessoaFisica> validator)
         {
             _notificationContext = notificationContext;
             _service = service;
